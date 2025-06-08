@@ -11,5 +11,5 @@
     } catch(PDOException $e) {
         echo "error connecting to the database". $e;
     }
-    
+    //Server
 ?>

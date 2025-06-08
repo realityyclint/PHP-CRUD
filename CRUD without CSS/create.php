@@ -6,10 +6,16 @@
     <title>PHP CRUD - CREATE</title>
 </head>
 <body>
-<?php
-    if(isset($_GET["error"])){?>
-    <p class="message"><?=htmlspecialchars($_GET["error"])?></p>    
-<?php}?>
+    <?php 
+        if(isset($_GET["error"])) {?>
+            <p class="message"><?=htmlspecialchars($_GET["error"])?></p>
+    <?php }?>
+
+    <?php 
+        if(isset($_GET["success"])) {?>
+            <p class="message"><?=htmlspecialchars($_GET["success"])?></p>
+    <?php }?>
+
     <form action="req/create.php" method="post">
         <label>Firstname</label>
         <input type="text" name="firstname"> <br>
@@ -20,8 +26,7 @@
         <label>Email</label>
         <input type="text" name="email"> <br>
 
-        <button type="submit">Create</button>
-
+        <button class="submit">Create</button>
     </form>
 </body>
 </html>
